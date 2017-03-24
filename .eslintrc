@@ -11,17 +11,19 @@
     "angular": true
   },
   "rules": {
+    "angular/json-functions": "off",
     "angular/no-private-call": "off",
     "array-bracket-spacing": "off",
     "arrow-body-style": [ "error", "as-needed" ],
     "comma-dangle": [ "error", "never" ],
+    "global-require": "off",
     "import/extensions": "off",
+    "import/first": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
-          "gulpfile.js",
-          "gulpfile.es6.js",
+          "webpack.config.babel.js",
           "src/**/*.js",
           "src/*.js",
           "test/*.js"

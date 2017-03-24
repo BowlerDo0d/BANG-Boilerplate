@@ -1,11 +1,14 @@
+import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+import 'font-awesome/css/font-awesome.css';
+import './main.scss';
+
 import 'babel-polyfill';
 
-import 'angular';
-import 'angular-ui-router';
-import 'angular-ui-bootstrap';
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import uiBootstrap from 'angular-ui-bootstrap';
 
 import * as project from '../../package.json';
-import './templates';
 import routing from './routes';
 
 import MainController from './mainController';
@@ -13,6 +16,6 @@ import MainController from './mainController';
 const projectName = project.name;
 
 // Main module
-angular.module(projectName, [ 'ui.bootstrap', 'ui.router', `${projectName}.templates` ])
+angular.module(projectName, [ uiBootstrap, uiRouter ])
   .config(routing)
   .controller('MainController', MainController);

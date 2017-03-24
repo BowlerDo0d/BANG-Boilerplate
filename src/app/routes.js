@@ -7,15 +7,15 @@ function routing($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('setup', {
       url: '/setup',
-      templateUrl: 'app/templates/setup.tmpl.html'
+      template: require('./templates/setup.html')
     })
     .state('gulp-info', {
       url: '/gulp-info',
-      templateUrl: 'app/templates/gulp-info.tmpl.html'
+      template: require('./templates/gulp-info.html')
     })
     .state('about', {
       url: '/about',
-      templateUrl: 'app/templates/about.tmpl.html'
+      template: require('./templates/about.html')
     });
 }
 
